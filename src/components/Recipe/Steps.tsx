@@ -15,10 +15,10 @@ const Steps = ({ steps }: Props) => {
       {steps.map((step: Step) => (
         <li>
           {step.title && (
-            <h3>{step.title}</h3>
+            <h4>{step.title}</h4>
           )}
 
-          {step.description}
+          <p dangerouslySetInnerHTML={{ __html: step.description }} />
         </li>
       ))}
     </ul>

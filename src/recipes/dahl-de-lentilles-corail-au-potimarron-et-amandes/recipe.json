@@ -1,0 +1,86 @@
+{
+  "url": "https://www.quitoque.fr/recettes/dahl-de-lentilles-corail-aux-pousses-d-epinards/2020-46",
+  "slug": "dahl-de-lentilles-corail-au-potimarron-et-amandes",
+  "title": "Dahl de lentilles corail au potimarron et amandes",
+  "cuisine": "indien",
+  "category": "mijotés",
+  "duration_times": {
+    "preparation": "PT20M",
+    "cooking": "PT10M",
+    "total": "PT30M"
+  },
+  "ingredients": [
+    {
+      "name": "Amandes émondées",
+      "quantity": "20 g"
+    },
+    {
+      "name": "Chou kale",
+      "quantity": "100 g"
+    },
+    {
+      "name": "Curry madras (sachet)",
+      "quantity": "4g",
+      "number": "0.5 x"
+    },
+    {
+      "name": "Gingembre",
+      "quantity": "50g",
+      "number": "1 à 3 cm x"
+    },
+    {
+      "name": "Gousse d'ail",
+      "quantity": "4g",
+      "number": "0.5 x"
+    },
+    {
+      "name": "Lait de coco",
+      "quantity": "150 mL"
+    },
+    {
+      "name": "Lentilles corail",
+      "quantity": "120 g"
+    },
+    {
+      "name": "Potimarron",
+      "quantity": "195g",
+      "number": "0.3 x"
+    },
+    {
+      "name": "Riz parfumé",
+      "quantity": "120 g"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Avant de commencer",
+      "description": "Lisez toutes les étapes, sortez les ingrédients et ustensiles nécessaires et rincez les fruits et légumes !"
+    },
+    {
+      "title": "Le riz",
+      "description": "Portez à ébullition une casserole remplie d'une grande quantité d'eau chaude (ainsi le riz collera moins).\n\nUtilisez si nécessaire une bouilloire pour chauffer l’eau plus vite ! Versez le riz et faites cuire 12 min à petits bouillons jusqu'à ce qu'il soit tendre.<br>\nRemuez régulièrement pour qu'il n’accroche pas au fond de la casserole. Une fois cuit, égouttez-le et remettez-le dans la casserole. Salez, poivrez. Couvrez pour le maintenir au chaud."
+    },
+    {
+      "title": "L'ail et le gingembre",
+      "description": "Astuce : Si vous ne souhaitez que parfumez légèrement votre plat au gingembre coupez-le en gros morceaux que vous pourrez facilement retirer au moment de la dégustation.\n\nPressez l'ail en entier avec la peau ou hachez-le.<br>\nEpluchez le gingembre (plus ou moins selon votre goût) à l’aide d’un couteau puis hachez-le ou râpez-le."
+    },
+    {
+      "title": "Le dahl",
+      "description": "Astuce : Pour qu'elle soit plus facile à découper, passez la courge 5 min au micro-ondes à pleine puissance. Ensuite, manipulez-la avec un torchon pour ne pas vous brûler.\n\nEpluchez et coupez le potimarron en deux dans la longueur. Retirez les graines à l'aide d'une cuillère. Coupez la chair de la courge en gros morceaux (1 cm environ).<br>\nDans une sauteuse, faites chauffer un filet d'huile de cuisson à feu moyen à vif. Faites colorer le potimarron, l'ail et le gingembre avec le curry Madras 5&nbsp;min.<br>\nA l’aide de vos mains, effeuillez le chou kale. Emincez les feuilles et la tige.<br>\nAjoutez les lentilles et le chou kale à la sauteuse avec la moitié du lait de coco et l'eau. Salez, poivrez.<br>\nCouvrez et faites mijoter à feu moyen 15&nbsp;min environ jusqu’à ce que les légumes et les lentilles soient bien tendres. Remuez régulièrement."
+    },
+    {
+      "title": "Bientôt à table !",
+      "description": "Une fois les lentilles cuites, ajoutez le reste du lait de coco. Prolongez la cuisson 1&nbsp;min jusqu'à ce que tout soit chaud.&nbsp;Goûtez et rectifiez l'assaisonnement si nécessaire.\n\nPercez avec un couteau le sachet d'amandes, mettez-le dans un sac plastique puis tapez dessus avec un rouleau à pâtisserie ou le fond d'une casserole pour les briser grossièrement."
+    },
+    {
+      "title": null,
+      "description": "Servez sans tarder le dahl de lentilles corail au potimarron accompagné du riz. Parsemez-le d'amandes."
+    }
+  ],
+  "pictures": [
+    {
+      "name": "dahl-de-lentilles-corail-aux-pousses-d-epinards-22.jpg",
+      "url": "https://s3.eu-central-1.amazonaws.com/media.quitoque.fr/recipe_w1536_h1024/recipes/images/dahl-de-lentilles-corail-aux-pousses-d-epinards/dahl-de-lentilles-corail-aux-pousses-d-epinards-22.jpg"
+    }
+  ]
+}

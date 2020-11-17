@@ -2,7 +2,6 @@
   "name": "miam-book",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
@@ -11,7 +10,7 @@
     "iso8601-duration": "^1.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^4.0.0",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
@@ -21,6 +20,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "generate": "npx babel-node src/generate-file.tsx --extensions \".tsx\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "eslintConfig": {
     "extends": [

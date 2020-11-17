@@ -6,25 +6,35 @@ import Steps from './components/Recipe/Steps';
 
 const Recipe = ({ recipe }: any) => {
   return (
-    <div className="recipe">
-      {recipe.title}
+    <article className="recipe">
+      <header className="page">
+        <h1>
+          {recipe.title}
+        </h1>
 
-      <PreparationTimes
-        preparationTime={recipe.duration_times.preparation}
-        cookingTime={recipe.duration_times.cooking}
-        totalTime={recipe.duration_times.total}
-      />
+        <PreparationTimes
+          preparationTime={recipe.duration_times.preparation}
+          cookingTime={recipe.duration_times.cooking}
+          totalTime={recipe.duration_times.total}
+        />
 
-      <Picture url={recipe.pictures[0].url} />
+        <Picture url={recipe.pictures[0].url} />
 
-      <div className="ingredients">
-        <Ingredients ingredients={recipe.ingredients} />
+        <div className="ingredients">
+          <p style={{ fontStyle: 'italic', fontWeight: 'bold' }}>
+            Pour 2 personnes :
+          </p>
+
+          <Ingredients ingredients={recipe.ingredients} />
+        </div>
+      </header>
+
+      <div className="content page">
+        <div className="steps">
+          <Steps steps={recipe.steps} />
+        </div>
       </div>
-
-      <div className="steps">
-        <Steps steps={recipe.steps} />
-      </div>
-    </div>
+    </article>
   );
 }
 
