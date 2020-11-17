@@ -6,7 +6,7 @@ import Steps from './components/Recipe/Steps';
 
 const Recipe = ({ recipe }: any) => {
   return (
-    <article className="recipe">
+    <article className="recipe" id={ recipe.slug }>
       <header className="page">
         <h1>
           {recipe.title}
