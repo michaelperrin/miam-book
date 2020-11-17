@@ -1,13 +1,8 @@
 import React from 'react';
+import Ingredient from '../../types/ingredient';
 
 type Props = {
   ingredients: Ingredient[],
-};
-
-type Ingredient = {
-  name: string;
-  number?: string;
-  quantity: string;
 };
 
 const Ingredients = ({ ingredients }: Props) => {

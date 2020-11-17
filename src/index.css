@@ -22,9 +22,14 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Gill Sans', sans-serif;
   font-size: 12px;
   line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .toc {
@@ -32,10 +37,11 @@ body {
   flex-wrap: wrap;
   margin-left: -0.1cm;
   margin-right: -0.1cm;
+  font-size: 11px;
 }
 
 .toc .recipe {
-  flex: 0 0 16%;
+  flex: 0 0 19%;
   padding: 0.1cm;
 }
 
@@ -47,7 +53,32 @@ body {
   display: block;
 }
 
+.toc .recipe-link .recipe-title {
+  font-weight: 500;
+}
+
 .toc .recipe-link::after {
+  content: "p. " target-counter(attr(href url), page);
+}
+
+.index .ingredient-name {
+  font-weight: bold;
+}
+
+.index .ingredient-name::after {
+  content: " ";
+}
+
+.index a {
+  color: inherit;
+  font-weight: normal;
+}
+
+.index a + a::before {
+  content: ' ';
+}
+
+.index a::after {
   content: target-counter(attr(href url), page);
 }
 
