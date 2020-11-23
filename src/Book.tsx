@@ -20,10 +20,8 @@ const Book = ({ recipes }: any) => {
         ))}
       </div>
 
-      <div className="toc">
-        <div className="index">
-          <Index recipes={recipes} />
-        </div>
+      <div>
+        <Index recipes={recipes} />
       </div>
     </div>
   );

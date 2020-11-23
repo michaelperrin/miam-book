@@ -30,11 +30,46 @@ const getIngredientIndex = (recipes: Array<any>): MyType => {
     })
   });
 
-  return ingredientIndex;
+  const indexByLetter: any = {};
+
+  for (const ingredient in ingredientIndex) {
+    let ingredientLetter: string = ingredientIndex[ingredient].ingredient.name.charAt(0);
+
+    if (ingredientLetter === 'É' || ingredientLetter === 'È') {
+      ingredientLetter = 'E';
+    }
+
+    if (indexByLetter[ingredientLetter] === undefined) {
+      indexByLetter[ingredientLetter] = [];
+    }
+
+    indexByLetter[ingredientLetter].push(ingredientIndex[ingredient]);
+  }
+
+  return indexByLetter;
 };
 
-const renderIndex = (recipes: Array<any>) => {
+const renderLetteredIndex = (recipes: Array<any>) => {
   const index = getIngredientIndex(recipes);
+
+  const renderedIndex = [];
+
+  const letters = Object.keys(index).sort();
+
+  for (const letter of letters) {
+    renderedIndex.push(
+      <div>
+        <div className="letter">{letter}</div>
+
+        {renderIndex(index[letter])}
+      </div>
+    )
+  }
+
+  return renderedIndex;
+};
+
+const renderIndex = (index: any) => {
   const renderedIndex = [];
 
   for (const ingredient in index) {
@@ -42,7 +77,7 @@ const renderIndex = (recipes: Array<any>) => {
       <div>
         <span className="ingredient-name">{index[ingredient].ingredient.name}</span>
 
-        {index[ingredient].recipeSlugs.map(slug => (
+        {index[ingredient].recipeSlugs.map((slug: string) => (
           // eslint-disable-next-line jsx-a11y/anchor-has-content
           <a href={`#${slug}`} />
         ))}
@@ -56,7 +91,7 @@ const renderIndex = (recipes: Array<any>) => {
 const Index = ({ recipes }: any) => {
   return (
     <div className="index">
-      {renderIndex(recipes)}
+      {renderLetteredIndex(recipes)}
     </div>
   );
 }

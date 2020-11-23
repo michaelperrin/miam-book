@@ -7,12 +7,16 @@ type Props = {
   totalTime: string,
 };
 
-const PreparationTimes = ({ preparationTime, cookingTime, totalTime }: Props) => {
+const PreparationTimes = ({ preparationTime, cookingTime }: Props) => {
   return (
-    <ul>
-      <li>Preparation: {parse(preparationTime).minutes}</li>
-      <li>Cooking: {parse(cookingTime).minutes}</li>
-      <li>Total: {parse(totalTime).minutes}</li>
+    <ul className="prepartion-times">
+      {preparationTime && (
+        <li>Préparation : {parse(preparationTime).minutes} min.</li>
+      )}
+
+      {cookingTime && (
+        <li>Cuisson : {parse(cookingTime).minutes} min.</li>
+      )}
     </ul>
   );
 }

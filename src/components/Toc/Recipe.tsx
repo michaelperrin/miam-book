@@ -7,9 +7,7 @@ const Recipe = ({ recipe }: any) => {
       <Picture url={recipe.pictures[0].url} />
 
       <a href={`#${recipe.slug}`} className="recipe-link">
-        <div className="recipe-title">
-          {recipe.title}
-        </div>
+        {recipe.title}
       </a>
     </article>
   );

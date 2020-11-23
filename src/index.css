@@ -5,8 +5,8 @@
   size: 21cm 21cm;
   margin-top: 1.5cm;
   margin-bottom: 1.5cm;
-  margin-left: 1.5cm;
-  margin-right: 1.5cm;
+  margin-left: 2cm;
+  margin-right: 2cm;
 
   @bottom-center {
     content: counter(page);
@@ -38,6 +38,7 @@ a {
   margin-left: -0.1cm;
   margin-right: -0.1cm;
   font-size: 11px;
+  page-break-after: always;
 }
 
 .toc .recipe {
@@ -53,16 +54,28 @@ a {
   display: block;
 }
 
-.toc .recipe-link .recipe-title {
-  font-weight: 500;
+.toc .recipe-link::after {
+  content: " p." target-counter(attr(href url), page);
+  font-weight: bold;
+  color: #294aa2;
 }
 
-.toc .recipe-link::after {
-  content: "p. " target-counter(attr(href url), page);
+.index {
+  column-count: 5;
+  column-gap: 0.5rem;
+  font-size: 10px;
+}
+
+.index .letter {
+  font-weight: 700;
+  border-bottom: 1px solid gray;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  page-break-after: avoid;
 }
 
 .index .ingredient-name {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .index .ingredient-name::after {
@@ -95,6 +108,7 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 30px;
+  margin-bottom: 0.2rem;
 }
 
 h3 {
@@ -113,12 +127,33 @@ ul {
   list-style-position: inside;
 }
 
+.recipe {
+  page-break-after: verso;
+}
+
 .recipe header img {
   width: 100%;
 }
 
 .recipe .content {
   display: flex;
+}
+
+.recipe ul.prepartion-times {
+  list-style-type: none;
+  margin-bottom: 1.2rem;
+}
+
+.recipe ul.prepartion-times li + li {
+  margin-left: 3rem;
+}
+
+.recipe ul.prepartion-times li {
+  display: inline-block;
+}
+
+.recipe .ingredients {
+  margin-top: 1rem;
 }
 
 .recipe .ingredients ul {
