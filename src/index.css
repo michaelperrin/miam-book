@@ -20,10 +20,41 @@
   box-sizing: border-box;
 }
 
+.cover {
+  page: fullpage;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cover h1 {
+  position: absolute;
+  bottom: 1cm;
+  right: 0;
+  width: 100%;
+  padding: 0.6cm 0 0.8cm 1.2cm;
+  color: white;
+  text-align: left;
+  font-weight: 300;
+  font-size: 2.2rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@page fullpage {
+  margin: 0; /* Use a full size page */
+
+  /* Remove page numbers for the cover */
+  @bottom-center {
+    content: none;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Gill Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.25;
 }
 
@@ -32,32 +63,39 @@ a {
   color: inherit;
 }
 
-.toc {
+.toc .toc-chunk {
   display: flex;
   flex-wrap: wrap;
   margin-left: -0.1cm;
   margin-right: -0.1cm;
-  font-size: 11px;
+  font-size: 12px;
   page-break-after: always;
 }
 
-.toc .recipe {
-  flex: 0 0 19%;
-  padding: 0.1cm;
+.toc .toc-chunk .recipe {
+  flex: 0 0 24.9%;
 }
 
-.toc .recipe .picture {
+.toc .toc-chunk .recipe .recipe-content {
+  margin: 0.1cm;
+  margin-bottom: 0.4cm;
+}
+
+.toc .toc-chunk .recipe .picture {
   max-width: 100%;
 }
 
 .toc .recipe-link {
   display: block;
+  font-weight: 500;
+  font-size: 10px;
 }
 
 .toc .recipe-link::after {
   content: " p." target-counter(attr(href url), page);
-  font-weight: bold;
+  font-weight: normal;
   color: #294aa2;
+  font-size: 11px;
 }
 
 .index {
@@ -101,6 +139,7 @@ img {
 }
 
 .page {
+  page: fullpage;
   page-break-after: always;
 }
 
@@ -128,7 +167,11 @@ ul {
 }
 
 .recipe {
-  page-break-after: verso;
+  page-break-before: verso;
+}
+
+.recipe header {
+  page-break-after: always;
 }
 
 .recipe header img {
@@ -190,4 +233,16 @@ ul {
 
 .recipe .content .steps ul {
   list-style: none;
+}
+
+.back-page {
+  page: fullpage;
+  page-break-before: recto;
+}
+
+.back-page p {
+  position: absolute;
+  right: 1cm;
+  bottom: 1cm;
+  font-size: 10px;
 }

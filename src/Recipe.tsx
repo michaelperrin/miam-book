@@ -7,7 +7,7 @@ import Steps from './components/Recipe/Steps';
 const Recipe = ({ recipe }: any) => {
   return (
     <article className="recipe" id={ recipe.slug }>
-      <header className="page">
+      <header>
         <h1>
           {recipe.title}
         </h1>
@@ -29,7 +29,7 @@ const Recipe = ({ recipe }: any) => {
         </div>
       </header>
 
-      <div className="content page">
+      <div className="content">
         <div className="steps">
           <Steps steps={recipe.steps} />
         </div>

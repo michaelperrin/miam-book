@@ -4,9 +4,12 @@ import { renderToString } from 'react-dom/server';
 import { readFileSync, writeFile } from 'fs';
 import { glob } from 'glob';
 import htmlTemplate from './helpers/template';
+import shuffle from './utils/shuffle';
 
-glob("./recipes/**/recipe.json", function (err, files) {
-  const renderedFiles = files.slice(0, 10);
+const NUMBER_OF_RECIPES = 112;
+
+glob('./recipes/**/recipe.json', function (err, files) {
+  const renderedFiles = shuffle(files).slice(0, NUMBER_OF_RECIPES);
   const recipes = renderedFiles.map((file: string) => JSON.parse(readFileSync(file, 'utf8')));
 
   const jsx = (<Book recipes={recipes} />);
